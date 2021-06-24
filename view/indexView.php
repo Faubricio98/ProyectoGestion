@@ -4,6 +4,7 @@
         <div class="hero-container" data-aos="fade-in">
             <!-- <img src="public/img/alm_tucu_logo.jpg" width="250" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100"> -->
             <h1>Bienvenido al Almacén Tucurrique</h1>
+
             <!-- <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2> -->
             <a href="#get-started" class="btn-get-started scrollto">Iniciar</a>
             <!--
@@ -29,40 +30,22 @@
 
       <div class="container">
         <div class="row">
+          <?php
+          foreach ($vars['prods'] as $item) {
+           ?>
+           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+             <div class="feature-block">
 
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="feature-block">
+               <img src="public/img/productos/<?php echo $item[3].$item[2] ?>" alt="img">
+               <h4><?php echo $item[7] ?></h4>
+               <p><?php echo $item[4] ?></p>
+               <a href="#">Ver más</a>
 
-              <img src="public/img/svg/cloud.svg" alt="img">
-              <h4>introducing whatsapp</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
-
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="feature-block">
-
-              <img src="public/img/svg/planet.svg" alt="img">
-              <h4>user friendly interface</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
-
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-block">
-
-              <img src="public/img/svg/asteroid.svg" alt="img">
-              <h4>build the app everyone love</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
-
-            </div>
-          </div>
-
+             </div>
+           </div>
+          <?php
+         }
+          ?>
         </div>
       </div>
 
@@ -75,40 +58,27 @@
         <div class="section-title text-center">
           <h2>Algunas de nuestras ofertas</h2>
         </div>
-
+      </div>
+        <div class="container">
         <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="public/img/svg/asteroid.svg" alt="img">
-              <h4>Free Updates</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="public/img/svg/cloud-computing.svg" alt="img">
-              <h4>App store support</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="public/img/svg/pixel.svg" alt="img">
-              <h4>Perfect Pixel</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="public/img/svg/code.svg" alt="img">
-              <h4>clean codes</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
+          <?php
+          foreach ($vars['ofers'] as $item) {
+           ?>
+           <div class="col-md-6 col-lg-4">
+             <div class="feature-block">
+               <img src="public/img/productos/<?php echo $item[6].$item[5] ?>" alt="img">
+               <h4><?php echo $item[10] ?></h4>
+               <?php if($item[9] == 0) {?>
+                 <p>-<?php echo $item[2]; ?>% Desde: <?php echo $item[1]; ?></p>
+               <?php }else{ ?>
+                 <p>-<?php echo $item[2]; ?>% ¡Ahora!</p>
+               <?php } ?>
+               <a href="#">Ver más</a>
+             </div>
+           </div>
+           <?php
+          }
+           ?>
         </div>
       </div>
     </section><!-- End Features Section -->
