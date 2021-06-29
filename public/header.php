@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="public/img/alm_tucu_logo.jpg" rel="icon">
+  <link href="public/img/alm_tucu_logo.png" rel="icon">
   <link href="public/img/alm_tucu_logo.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -41,9 +41,8 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div id="logo">
-        <h1><a href="index.php">Almacén Tucurrique</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+	<!-- Uncomment below if you prefer to use an image logo -->
+	<h1> <a href="index.php"> <img src="public/img/alm_tucu_logo.svg" alt="logo" title="Almacén Tucurrique" width="50" /> Almacén Tucurrique</a> </h1>
       </div>
 
       <nav id="navbar" class="navbar">
