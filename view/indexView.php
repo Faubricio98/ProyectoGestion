@@ -93,31 +93,31 @@
         </div>
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-3 col-md-4">
-
-            <div class="info">
-              <div>
+          <div class="col-6 col-md-5">
+            <div class="row justify-content-center info">
+              <div class="col-6" style="margin-right: 1em;">
                 <i class="bi bi-geo-alt"></i>
                 <p>A108 Adam Street<br>New York, NY 535022</p>
               </div>
 
-              <div class="email">
+              <div class="col-6 email" style="margin-right: 1em;">
                 <i class="bi bi-envelope"></i>
-                <p>info@example.com</p>
+                <p>almacentucurrique@gmail.com</p>
               </div>
 
-              <div>
+              <div class="col-6" style="margin-right: 1em;">
                 <i class="bi bi-phone"></i>
                 <p>+1 5589 55488 55s</p>
               </div>
             </div>
 
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <div class="row justify-content-center social-links">
+              <div class="col-6">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
             </div>
 
           </div>
