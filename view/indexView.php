@@ -39,7 +39,10 @@
                <img src="public/img/productos/<?php echo $item[3].$item[2] ?>" alt="img">
                <h4><?php echo $item[7] ?></h4>
                <p><?php echo $item[4] ?></p>
-               <a href="#">Ver más</a>
+               <form action="?controlador=Productos&accion=mostrar" method="post">
+                 <input type="hidden" name="id" value="<?php echo $item[0] ?>">
+                 <input type="submit" name="" value="Ver más"style="border:0; outline:0"/>
+               </form>
 
              </div>
            </div>
@@ -73,7 +76,10 @@
                <?php }else{ ?>
                  <p>-<?php echo $item[2]; ?>% ¡Ahora!</p>
                <?php } ?>
-               <a href="#">Ver más</a>
+               <form action="?controlador=Productos&accion=mostrar" method="post">
+                 <input type="hidden" name="id" value="<?php echo $item[3] ?>">
+                 <input type="submit" name="" value="Ver más"style="border:0; outline:0"/>
+               </form>
              </div>
            </div>
            <?php
