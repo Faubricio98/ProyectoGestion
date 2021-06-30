@@ -103,6 +103,7 @@
 
   <!-- Template Main JS File -->
   <script src="public/js/main.js"></script>
+  <script src="public/js/script.js"></script>
 
 </body>
 
