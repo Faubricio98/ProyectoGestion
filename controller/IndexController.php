@@ -8,11 +8,10 @@ class IndexController {
     public function mostrar(){
       require 'model/IndexModel.php';
       $inicio = new IndexModel();
-
+      $data['categorias'] = $inicio->getAllCategorias(); //agregar siempre esta línea
       $data['prods']=$inicio->masVistos(3);
       $data['ofers']=$inicio->getOfertas(3);
-
-        $this->view->show("indexView.php", $data);
+      $this->view->show("indexView.php", $data);
     } // listar
 }
 
