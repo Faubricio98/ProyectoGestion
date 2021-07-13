@@ -34,7 +34,7 @@
                     <div class="section-title text-center">
                         <h2>Estas son nuestras ofertas</h2>
                     </div>
-                    <form class="" style="display:flex; justify-content:center" action="?controlador=Ofertas&accion=mostrarFiltro" method="post">
+                    <form class="" style="display:flex; justify-content:center" action="?controlador=Ofertas&accion=mostrarFiltro&page=1" method="post">
                       <input type="text" name="rangofechas" placeholder="Rango de fechas" required style="width:200px"/>
                       <input type="submit" class="btn btn-success" value="Buscar por fechas" style="border:0;border-radius:2px" />
                     </form>
