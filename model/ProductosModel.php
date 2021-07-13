@@ -28,5 +28,35 @@
       $consulta->closeCursor();
       return $data;
     }
+
+    public function createNewArticulo($form, $arch, $desc, $prec, $cat, $nom){
+      $consulta = $this->db->prepare("CALL sp_create_new_articulo('".$form."', '".$arch."', '".$desc."', ".$prec.", ".$cat.", '".$nom."');");
+      $consulta->execute();
+      $data=$consulta->fetchAll();
+      $consulta->closeCursor();
+      foreach ($data as $item) {
+        return $item[1];
+      }
+    }
+
+    public function editarArticulo($id, $form, $arch, $desc, $prec, $cat, $nom){
+      $consulta = $this->db->prepare("CALL sp_update_articulo(".$id.", '".$form."', '".$arch."', '".$desc."', ".$prec.", ".$cat.", '".$nom."');");
+      $consulta->execute();
+      $data=$consulta->fetchAll();
+      $consulta->closeCursor();
+      foreach ($data as $item) {
+        return $item[1];
+      }
+    }
+
+    public function eliminarArticulo($id){
+      $consulta = $this->db->prepare("CALL sp_delete_articulo(".$id.");");
+      $consulta->execute();
+      $data=$consulta->fetchAll();
+      $consulta->closeCursor();
+      foreach ($data as $item) {
+        return $item[1];
+      }
+    }
   }
 ?>
