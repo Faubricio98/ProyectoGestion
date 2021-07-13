@@ -22,6 +22,8 @@
   <link href="public/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="public/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="public/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="public/css/datatables.min.css" rel="stylesheet">
+  <link href="public/css/daterangepciker.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="public/css/style.css" rel="stylesheet">
@@ -49,8 +51,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="">Productos</a></li>
-          <li><a class="nav-link scrollto" href="">Ofertas</a></li>
-          <li><a class="nav-link scrollto" href="">Administradores</a></li>
+          <li><a class="nav-link scrollto" href="?controlador=OfertasAdmin&accion=ofertasAdmin">Ofertas</a></li>
+          <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=administradores">Administradores</a></li>
           <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=logout">Cerrar Sesion</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

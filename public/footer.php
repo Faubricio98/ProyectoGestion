@@ -102,12 +102,18 @@
   <script src="public/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="public/vendor/php-email-form/validate.js"></script>
   <script src="public/vendor/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="public/vendor/swal/swal.js"></script>
   <script src="public/vendor/datatable/datatables.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="public/js/main.js"></script>
   <script src="public/js/script.js"></script>
   <script src="public/js/productos.js"></script>
+  <script src="public/js/ofertas.js"></script>
+  <script src="public/js/admin.js"></script>
 
 </body>
 
