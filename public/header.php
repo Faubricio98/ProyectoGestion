@@ -54,14 +54,14 @@
               <?php 
                 foreach ($vars['categorias'] as $item) {
               ?>
-                  <li><a href="?controlador=Productos&accion=mostrar&id=<?php echo $item[0]?>"> <?php echo $item[1] ?></a></li>
+                  <li><a href="?controlador=Categorias&accion=mostrar&id=<?php echo $item[0]?>&page=1"> <?php echo $item[1] ?></a></li>
               <?php
                 }
               ?>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#features">Ofertas</a></li>
-          <li><a class="nav-link scrollto" href="#screenshots">Sobre Nosotros</a></li>
+          <li><a class="nav-link scrollto" href="?controlador=Ofertas&accion=mostrar&page=1">Ofertas</a></li>
+          <li><a class="nav-link scrollto" href="index.php#about-us">Sobre Nosotros</a></li>
           <li><a class="nav-link scrollto" href="index.php#contact">Contáctenos</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
