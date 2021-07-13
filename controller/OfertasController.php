@@ -54,8 +54,8 @@
                 }
                 $data['ofertas'] = array_slice($data['ofertas'], ($data['actualPage']-1)*$min, $min);
             }
-            //$data['previousPage'] = $_GET['page'] - 1; tira error
-            //$data['nextPage'] = $_GET['page'] + 1; tira error
+            $data['previousPage'] = $_GET['page'] - 1;
+            $data['nextPage'] = $_GET['page'] + 1;
             $this->view->show("listarOfertasView.php", $data);
         }
     }
