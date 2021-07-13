@@ -7,6 +7,23 @@ function modaleditProds(id,cod,nom,desc,pre){
   $('#modalEditProd').modal("show");
 }
 
-function modalinsProds(){
+function eliminandoProducto() {
+  var id = document.getElementById('idprod').value;
+  parametros = {"id": id};
+  $.ajax(
+    {
+      data: parametros,
+      url: '?controlador=ProductosAdmin&accion=eliminarProducto',
+      type: 'post',
+      beforeSend: function () { }, //antes de enviar
+      success: function (response) {
+        location.reload();
+      } //se ha enviado
+    }
+  );
+}
+
+function modalinsProds() {
+  alert('Hola');
   $('#modalInsProd').modal("show");
 }

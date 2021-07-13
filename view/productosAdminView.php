@@ -1,6 +1,19 @@
 <?php include_once 'public/headerAdmin.php';?>
 <section id="get-started" class="padd-section text-center">
   <section id="" class="container shadow-lg p-3 mt-5 bg-white rounded" data-aos="fade-in">
+    <?php if ($vars['imagen'] == 1) { ?>
+        <div class="alert alert-success text-center mt-3" role="alert">
+          Producto guardado
+        </div>
+    <?php } if ($vars['imagen'] == -1) { ?>
+        <div class="alert alert-danger text-center mt-3" role="alert">
+          Formato de imagen incorrecto, solo se aceptan formatos .png, .jpg o .jpeg
+        </div>
+    <?php } if ($vars['imagen'] == -2) { ?>
+        <div class="alert alert-danger text-center mt-3" role="alert">
+          Ha ocurrido un error al subir la imagen, vuelva a intentarlo más tarde
+        </div>
+    <?php } ?>
     <div class="row">
       <div class="" style="display:flex; justify-content: flex-end;">
         <button type="button" class="btn-primary" style="border:0;border-radius:2px" onclick="modalinsProds()">Nuevo</button>
@@ -33,43 +46,52 @@
 
 <!--Modal para modificar productos-->
 <div class="modal" tabindex="-1" id="modalEditProd">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5>Ver Producto</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#modalEditProd').modal('toggle');">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <span style="color:red" id="span"></span>
-            <form id="editProdForm" autocomplete="off" enctype="multipart/form-data">
-                <div class="modal-body">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Ver Producto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#modalEditProd').modal('toggle');">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <span style="color:red" id="span"></span>
+      <form id="editProdForm" autocomplete="off" action="?controlador=ProductosAdmin&accion=editarProducto" method="post" enctype="multipart/form-data">
+        <div class="modal-body">
+          <input type="hidden" id="idprod" name="idprod" class="form-control" required />
 
-                    <input type="hidden" id="idprod" name="idprod" class="form-control" required />
+          <label for="code" class="font-weight-bold">Código del producto</label>
+          <input type="text" id="code" class="form-control mt-1" name="code" placeholder="Código" readonly/>
 
-                    <label for="code" class="font-weight-bold">Código del producto</label>
-                    <input type="text" id="code" class="form-control mt-1" name="code" placeholder="Código" readonly/>
+          <label for="nome" class="font-weight-bold">Nombre del producto</label>
+          <input type="text" id="nome" class="form-control mt-1" name="nome" placeholder="Nombre" required />
 
-                    <label for="nome" class="font-weight-bold">Nombre del producto</label>
-                    <input type="text" id="nome" class="form-control mt-1" name="nome" placeholder="Nombre" required />
+          <label for="desce" class="font-weight-bold">Descripción del producto</label>
+          <input type="text" id="desce" class="form-control mt-1" name="desce" placeholder="Descripción" required />
 
-                    <label for="desce" class="font-weight-bold">Descripción del producto</label>
-                    <input type="text" id="desce" class="form-control mt-1" name="desce" placeholder="Descripción" required />
+          <label for="prece" class="font-weight-bold">Precio de producto</label>
+          <input type="number" id="prece" class="form-control mt-1" name="prece" placeholder="Precio" min="1" required />
 
-                    <label for="prece" class="font-weight-bold">Precio de producto</label>
-                    <input type="number" id="prece" class="form-control mt-1" name="prece" placeholder="Precio" min="1" required />
+          <label for="cate" class="font-weight-bold">Categoría del producto</label><br>
+          <select name="cate" id="cate">
+            <?php 
+              foreach ($vars['categorias'] as $item) {
+            ?>
+              <option value="<?php echo $item[0] ?>"><?php echo $item[1] ?></option>
+            <?php 
+              }
+            ?>
+          </select><br>
 
-                    <label for="imge" class="font-weight-bold">Imagen del producto</label>
-                    <input type="file" id="imge" class="form-control mt-1" name="imge" placeholder="Imagen" accept="image/png, .jpeg, .jpg" />
-
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary" value="Editar" />
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
-            </form>
+          <label for="imge" class="font-weight-bold">Imagen del producto</label>
+          <input type="file" id="imge" class="form-control mt-1" name="imge" placeholder="Imagen" accept="image/png, .jpeg, .jpg" />
         </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Editar" />
+          <button type="button" onclick="eliminandoProducto()" class="btn btn-danger">Eliminar</button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
 
 <!--Modal para insertar productos-->
@@ -94,6 +116,17 @@
 
                     <label for="prec" class="font-weight-bold">Precio de producto</label>
                     <input type="number" id="prec" class="form-control mt-1" name="prec" placeholder="Precio" min="1" required />
+
+                    <label for="cat" class="font-weight-bold">Categoría del producto</label><br>
+                    <select name="cat" id="cat">
+                      <?php 
+                        foreach ($vars['categorias'] as $item) {
+                      ?>
+                        <option value="<?php echo $item[0] ?>"><?php echo $item[1] ?></option>
+                      <?php 
+                        }
+                      ?>
+                    </select><br>
 
                     <label for="img" class="font-weight-bold">Imagen del producto</label>
                     <input type="file" id="img" class="form-control mt-1" name="img" placeholder="Imagen" accept="image/png, .jpeg, .jpg" required />

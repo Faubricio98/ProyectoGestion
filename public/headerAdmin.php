@@ -43,12 +43,12 @@
 
       <div id="logo">
 	<!-- Uncomment below if you prefer to use an image logo -->
-	<h1> <a href=""> <img src="public/img/alm_tucu_logo.svg" alt="logo" title="Almacén Tucurrique" width="50" /> Almacén Tucurrique</a> </h1>
+	<h1> <a href="?controlador=ProductosAdmin&accion=mostrar"> <img src="public/img/alm_tucu_logo.svg" alt="logo" title="Almacén Tucurrique" width="50" /> Almacén Tucurrique</a> </h1>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="">Productos</a></li>
+          <li><a class="nav-link scrollto" href="?controlador=ProductosAdmin&accion=mostrar">Productos</a></li>
           <li><a class="nav-link scrollto" href="">Ofertas</a></li>
           <li><a class="nav-link scrollto" href="">Administradores</a></li>
           <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=logout">Cerrar Sesion</a></li>

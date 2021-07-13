@@ -20,5 +20,12 @@ class AdministradorModel{
       $consulta->closeCursor();
       return $data;
     }
+    public function getAllCategorias(){
+      $consulta = $this->db->prepare("CALL sp_get_categorias;");
+      $consulta->execute();
+      $data=$consulta->fetchAll();
+      $consulta->closeCursor();
+      return $data;
+    }
   }
  ?>

@@ -24,6 +24,7 @@ class AdministradorController {
         $_SESSION['user'] = $data;
 
         $prods['prods'] = $model->getAllProductos();
+        $prods['imagen'] = 2;
         $this->view->show("productosAdminView.php", $prods);
       }
     }
