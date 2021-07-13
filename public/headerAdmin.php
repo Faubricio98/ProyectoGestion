@@ -25,6 +25,7 @@
 
   <!-- Template Main CSS File -->
   <link href="public/css/style.css" rel="stylesheet">
+  <link href="public/css/estilo.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: eStartup - v4.3.0
@@ -42,28 +43,15 @@
 
       <div id="logo">
 	<!-- Uncomment below if you prefer to use an image logo -->
-	<h1> <a href="index.php"> <img src="public/img/alm_tucu_logo.svg" alt="logo" title="Almacén Tucurrique" width="50" /> Almacén Tucurrique</a> </h1>
+	<h1> <a href=""> <img src="public/img/alm_tucu_logo.svg" alt="logo" title="Almacén Tucurrique" width="50" /> Almacén Tucurrique</a> </h1>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="index.php">Inicio</a></li>
-          <li><a class="nav-link scrollto" href="?controlador=Productos&accion=mostrarListar&page=1">Artículos</a></li>
-          <li class="dropdown"><a href="#"><span>Categorías</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <?php
-                foreach ($vars['categorias'] as $item) {
-              ?>
-                  <li><a href="?controlador=Categorias&accion=mostrar&id=<?php echo $item[0]?>&page=1"> <?php echo $item[1] ?></a></li>
-              <?php
-                }
-              ?>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="?controlador=Ofertas&accion=mostrar&page=1">Ofertas</a></li>
-          <li><a class="nav-link scrollto" href="index.php#about-us">Sobre Nosotros</a></li>
-          <li><a class="nav-link scrollto" href="index.php#contact">Contáctenos</a></li>
-          <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=login">Administración</a></li>
+          <li><a class="nav-link scrollto" href="">Productos</a></li>
+          <li><a class="nav-link scrollto" href="">Ofertas</a></li>
+          <li><a class="nav-link scrollto" href="">Administradores</a></li>
+          <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=logout">Cerrar Sesion</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
