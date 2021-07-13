@@ -75,65 +75,48 @@
       </div>
     </section><!-- End Features Section -->
     <?php } ?>
-    <!-- ======= Sobre Nosotros Section ======= -->
-    <section id="about-us" class="padd-section">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-          <h2>Sobre Nosotros</h2>
-          <!--<p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
-        </div>
-
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-6 col-md-5">
-            <div class="row justify-content-center info">
-              <div class="col-6" style="margin-right: 1em;">
-                <i class="bi bi-info"></i>
-                <p>50 metros oeste de la Plaza Deportes, frente a la Ferretería Santa Rosa, Tucurrique</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
     
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="padd-section">
 
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
-          <h2>Contáctenos</h2>
-          <!--<p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
+          <h2>Información</h2>
         </div>
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-6 col-md-5">
-            <div class="row justify-content-center info">
-              <div class="col-6" style="margin-right: 1em;">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
                 <i class="bi bi-geo-alt"></i>
                 <p>50 metros oeste de la Plaza Deportes, frente a la Ferretería Santa Rosa, Tucurrique</p>
               </div>
 
-              <div class="col-6 email" style="margin-right: 1em;">
+              <div class="email">
                 <i class="bi bi-envelope"></i>
                 <p>f.tucurrique@gmail.com</p>
               </div>
 
-              <div class="col-6" style="margin-right: 1em;">
+              <div>
                 <i class="bi bi-phone"></i>
                 <p>+506 2535 0238</p>
               </div>
             </div>
 
-            <div class="row justify-content-center social-links">
-              <div class="col-4">
-                <a href="https://www.facebook.com/Almacen-Tucurrique-257253870977608" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=50660442147" class="instagram"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://goo.gl/maps/rdtgjTy83pgK9mCT8" class="instagram"><i class="bi bi-geo-alt"></i></a>
-              </div>
+            <div class="social-links">
+              <a href="https://www.facebook.com/Almacen-Tucurrique-257253870977608" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=50660442147" class="instagram"><i class="bi bi-whatsapp"></i></a>
+              <a href="https://goo.gl/maps/rdtgjTy83pgK9mCT8" class="instagram"><i class="bi bi-geo-alt"></i></a>
             </div>
 
+          </div>
+
+          <div class="col-lg-5 col-md-8 text-justify">
+            <p> En el Almacén Tucurrique usted podrá encontrar todo para el hogar, accesorios, 
+            celulares, electródomesticos, libreria, regalos para toda ocación, etc. Nuestro 
+            propósito es ofrecerle productos de calidad para satisfacer las necesidades 
+            del pueblo de Tucurrique y sus alrededores. </p>
           </div>
         </div>
       </div>
