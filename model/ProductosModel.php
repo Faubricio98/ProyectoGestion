@@ -58,5 +58,13 @@
         return $item[1];
       }
     }
+
+    public function getProductosFiltro($nombre){
+      $consulta = $this->db->prepare("CALL sp_get_productos_filtro('".$nombre."');");
+      $consulta->execute();
+      $data=$consulta->fetchAll();
+      $consulta->closeCursor();
+      return $data;
+    }
   }
 ?>
