@@ -1,4 +1,4 @@
-<?php include_once 'public/header.php'; ?>
+<?php include_once 'public/headerLogin.php'; ?>
 <section id="get-started" class="padd-section">
   <section id="" class="container mt-5 shadow-lg p-3 bg-white rounded" data-aos="fade-in">
     <form autocomplete="off" class="" action="?controlador=Administrador&accion=loginResult" method="post">
