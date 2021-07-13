@@ -21,6 +21,10 @@
             <div class="section-title text-center">
                 <h2>Estos son nuestros artículos</h2>
             </div>
+            <form class="" style="display:flex; justify-content:center" action="?controlador=Productos&accion=mostrarListarFiltro&page=1" method="post">
+              <input type="text" name="nombreArt" placeholder="Nombre" required style="width:200px"/>
+              <input type="submit" class="btn btn-success" value="Buscar por nombre" style="border:0;border-radius:2px" />
+            </form>
         </div>
         <div class="container">
             <div class="row">
