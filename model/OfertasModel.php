@@ -21,6 +21,14 @@
             $consulta->closeCursor();
             return $data;
         }
+
+        public function getOfertasFiltro($fechai, $fechaf){
+            $consulta = $this->db->prepare("call get_all_ofertas_filtro('".$fechai."', '".$fechaf."');");
+            $consulta->execute();
+            $data=$consulta->fetchAll();
+            $consulta->closeCursor();
+            return $data;
+        }
     }
-    
+
 ?>

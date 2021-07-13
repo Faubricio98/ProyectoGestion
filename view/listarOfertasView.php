@@ -16,7 +16,7 @@
             color: white;
         }
     </style>
-    <?php 
+    <?php
         if (count($vars['ofertas']) == 0) {
     ?>
             <section id="hero">
@@ -34,6 +34,10 @@
                     <div class="section-title text-center">
                         <h2>Estas son nuestras ofertas</h2>
                     </div>
+                    <form class="" style="display:flex; justify-content:center" action="?controlador=Ofertas&accion=mostrarFiltro" method="post">
+                      <input type="text" name="rangofechas" placeholder="Rango de fechas" required style="width:200px"/>
+                      <input type="submit" class="btn btn-success" value="Buscar por fechas" style="border:0;border-radius:2px" />
+                    </form>
                 </div>
                 <div class="container">
                     <div class="row">
@@ -44,16 +48,16 @@
                                     <div class="feature-block">
                                         <img src="public/img/productos/<?php echo $item[6].$item[5] ?>" alt="img">
                                         <h4><?php echo $item[10] ?></h4>
-                                        <?php 
+                                        <?php
                                             if($item[9] == 0) {
                                         ?>
                                                 <p>-<?php echo $item[2]; ?>% Desde: <?php echo $item[1]; ?></p>
-                                        <?php 
+                                        <?php
                                             }else{
                                         ?>
                                                 <p>-<?php echo $item[2]; ?>% ¡Ahora!</p>
-                                        <?php 
-                                            } 
+                                        <?php
+                                            }
                                         ?>
                                         <form action="?controlador=Productos&accion=mostrar" method="post">
                                             <input type="hidden" name="id" value="<?php echo $item[3] ?>">

@@ -33,6 +33,38 @@
             $this->view->show("listarProductosCategoriaView.php", $data);
         }
 
+        public function categorias(){
+          include 'model/CategoriaModel.php';
+          $inicio = new CategoriaModel();
+          $data['cats'] = $inicio->getAllCategorias();
+          $this->view->show("categoriasAdminView.php", $data);
+        }
+
+        public function insertarCategoria(){
+          $nombre = $_POST['cat'];
+          include 'model/CategoriaModel.php';
+          $inicio = new CategoriaModel();
+          $result = $inicio->insertar($nombre);
+          echo $result;
+        }
+
+        public function modificarCategoria(){
+          $id = $_POST['idcat'];
+          $nombre = $_POST['cate'];
+          include 'model/CategoriaModel.php';
+          $inicio = new CategoriaModel();
+          $result = $inicio->modificar($id,$nombre);
+          echo $result;
+        }
+
+        public function eliminarCategoria(){
+          $id = $_POST['id'];
+          include 'model/CategoriaModel.php';
+          $inicio = new CategoriaModel();
+          $result = $inicio->eliminar($id);
+          echo $result;
+        }
+
     }
 
 ?>

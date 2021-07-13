@@ -54,6 +54,7 @@
           <li><a class="nav-link scrollto" href="?controlador=ProductosAdmin&accion=mostrar">Productos</a></li>
           <li><a class="nav-link scrollto" href="?controlador=OfertasAdmin&accion=ofertasAdmin">Ofertas</a></li>
           <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=administradores">Administradores</a></li>
+          <li><a class="nav-link scrollto" href="?controlador=Categorias&accion=categorias">Categorias</a></li>
           <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=logout">Cerrar Sesion</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
