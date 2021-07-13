@@ -56,6 +56,7 @@
   <script src="public/js/productos.js"></script>
   <script src="public/js/ofertas.js"></script>
   <script src="public/js/admin.js"></script>
+  <script src="public/js/categorias.js"></script>
 
 </body>
 

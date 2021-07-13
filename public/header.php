@@ -22,6 +22,7 @@
   <link href="public/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="public/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="public/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="public/css/daterangepciker.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="public/css/style.css" rel="stylesheet">
