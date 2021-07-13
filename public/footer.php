@@ -95,15 +95,19 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="public/vendor/jquery/jquery.js"></script>
+  <script src="public/vendor/jquery/jquery.min.js"></script>
   <script src="public/vendor/aos/aos.js"></script>
   <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="public/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="public/vendor/php-email-form/validate.js"></script>
   <script src="public/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="public/vendor/datatable/datatables.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="public/js/main.js"></script>
   <script src="public/js/script.js"></script>
+  <script src="public/js/productos.js"></script>
 
 </body>
 
