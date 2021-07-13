@@ -22,7 +22,6 @@
   <link href="public/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="public/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="public/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="public/css/daterangepciker.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="public/css/style.css" rel="stylesheet">
@@ -46,7 +45,7 @@
 	<h1> <a href="index.php"> <img src="public/img/alm_tucu_logo.svg" alt="logo" title="Almacén Tucurrique" width="50" /> Almacén Tucurrique</a> </h1>
       </div>
 
-      <nav id="navbar" class="navbar">
+      <!--<nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="index.php">Inicio</a></li>
           <li><a class="nav-link scrollto" href="?controlador=Productos&accion=mostrarListar&page=1">Artículos</a></li>
@@ -67,7 +66,7 @@
           <li><a class="nav-link scrollto" href="?controlador=Administrador&accion=login">Administración</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav> .navbar -->
 
     </div>
   </header><!-- End Header -->

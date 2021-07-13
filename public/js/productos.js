@@ -8,22 +8,40 @@ function modaleditProds(id,cod,nom,desc,pre){
 }
 
 function eliminandoProducto() {
-  var id = document.getElementById('idprod').value;
-  parametros = {"id": id};
-  $.ajax(
-    {
-      data: parametros,
-      url: '?controlador=ProductosAdmin&accion=eliminarProducto',
-      type: 'post',
-      beforeSend: function () { }, //antes de enviar
-      success: function (response) {
-        location.reload();
-      } //se ha enviado
+  Swal.fire({
+    title: '¿Seguro?',
+    text: 'No se podrán revertir los cambios',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Si, eliminar',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.value) {
+      // Proceso de eliminacion de datos
+      var id = document.getElementById('idprod').value;
+      parametros = { "id": id };
+      $.ajax(
+        {
+          data: parametros,
+          url: '?controlador=ProductosAdmin&accion=eliminarProducto',
+          type: 'post',
+          beforeSend: function () { }, //antes de enviar
+          success: function (response) {
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Producto editado',
+              showConfirmButton: false,
+              timer: 2000
+            });
+            location.reload();
+          } //se ha enviado
+        }
+      );
     }
-  );
+  })
 }
 
 function modalinsProds() {
-  alert('Hola');
   $('#modalInsProd').modal("show");
 }

@@ -35,6 +35,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="public/vendor/swal/swal.js"></script>
 </head>
 
 <body>

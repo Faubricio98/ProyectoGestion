@@ -2,18 +2,38 @@
 <section id="get-started" class="padd-section text-center">
   <section id="" class="container shadow-lg p-3 mt-5 bg-white rounded" data-aos="fade-in">
     <?php if ($vars['imagen'] == 1) { ?>
-        <div class="alert alert-success text-center mt-3" role="alert">
-          Producto guardado
-        </div>
+        <script>
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Producto guardado',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        </script>
     <?php } if ($vars['imagen'] == -1) { ?>
-        <div class="alert alert-danger text-center mt-3" role="alert">
-          Formato de imagen incorrecto, solo se aceptan formatos .png, .jpg o .jpeg
-        </div>
+        <script>
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Formato de imagen incorrecto, solo se aceptan formatos .png, .jpg o .jpeg',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        </script>
     <?php } if ($vars['imagen'] == -2) { ?>
-        <div class="alert alert-danger text-center mt-3" role="alert">
-          Ha ocurrido un error al subir la imagen, vuelva a intentarlo más tarde
-        </div>
-    <?php } ?>
+        <script>
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Ha ocurrido un error al subir la imagen, vuelva a intentarlo más tarde',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        </script>
+    <?php } 
+      $vars['imagen'] = 2;
+    ?>
     <div class="row">
       <div class="" style="display:flex; justify-content: flex-end;">
         <button type="button" class="btn-primary" style="border:0;border-radius:2px" onclick="modalinsProds()">Nuevo</button>
