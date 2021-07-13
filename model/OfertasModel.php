@@ -1,21 +1,21 @@
 <?php
 
-    class CategoriaModel{
+    class OfertasModel{
         function __construct(){
             require 'libs/SPDO.php';
             $this->db=SPDO::singleton();
         }
 
-        public function getAllCategorias(){
-            $consulta = $this->db->prepare("CALL sp_get_categorias;");
+        public function getAllOfertas(){
+            $consulta = $this->db->prepare("call get_all_ofertas;");
             $consulta->execute();
             $data=$consulta->fetchAll();
             $consulta->closeCursor();
             return $data;
         }
 
-        public function getProductosByCategoria($id){
-            $consulta = $this->db->prepare("CALL sp_get_productos_by_categorias(".$id.");");
+        public function getAllCategorias(){
+            $consulta = $this->db->prepare("CALL sp_get_categorias;");
             $consulta->execute();
             $data=$consulta->fetchAll();
             $consulta->closeCursor();

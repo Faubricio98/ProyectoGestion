@@ -1,19 +1,12 @@
 <?php include_once 'public/header.php'; ?>
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-      <div class="hero-container" data-aos="fade-in">
-          <!-- <img src="public/img/alm_tucu_logo.jpg" width="250" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100"> -->
-          <h1>Bienvenido al Almacén Tucurrique</h1>
-          <!-- <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2> -->
-          <a href="#get-started" class="btn-get-started scrollto">Iniciar</a>
-          <!--
-          <div class="btns">
-              <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-              <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
-              <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-          </div>
-          -->
-      </div>
+    <div class="hero-container" data-aos="fade-in">
+      <!-- <img src="public/img/alm_tucu_logo.jpg" width="250" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100"> -->
+      <h1>Bienvenido al Almacén Tucurrique</h1>
+      <!-- <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2> -->
+      <a href="#get-started" class="btn-get-started scrollto">Iniciar</a>
+    </div>
   </section><!-- End Hero Section -->
 
   <!-- ======= Get Started Section ======= -->
@@ -82,6 +75,29 @@
       </div>
     </section><!-- End Features Section -->
     <?php } ?>
+    <!-- ======= Sobre Nosotros Section ======= -->
+    <section id="about-us" class="padd-section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Sobre Nosotros</h2>
+          <!--<p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-6 col-md-5">
+            <div class="row justify-content-center info">
+              <div class="col-6" style="margin-right: 1em;">
+                <i class="bi bi-info"></i>
+                <p>50 metros oeste de la Plaza Deportes, frente a la Ferretería Santa Rosa, Tucurrique</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+    
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="padd-section">
 
@@ -96,26 +112,25 @@
             <div class="row justify-content-center info">
               <div class="col-6" style="margin-right: 1em;">
                 <i class="bi bi-geo-alt"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>50 metros oeste de la Plaza Deportes, frente a la Ferretería Santa Rosa, Tucurrique</p>
               </div>
 
               <div class="col-6 email" style="margin-right: 1em;">
                 <i class="bi bi-envelope"></i>
-                <p>almacentucurrique@gmail.com</p>
+                <p>f.tucurrique@gmail.com</p>
               </div>
 
               <div class="col-6" style="margin-right: 1em;">
                 <i class="bi bi-phone"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+506 2535 0238</p>
               </div>
             </div>
 
             <div class="row justify-content-center social-links">
-              <div class="col-6">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <div class="col-4">
+                <a href="https://www.facebook.com/Almacen-Tucurrique-257253870977608" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=50660442147" class="instagram"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://goo.gl/maps/rdtgjTy83pgK9mCT8" class="instagram"><i class="bi bi-geo-alt"></i></a>
               </div>
             </div>
 
